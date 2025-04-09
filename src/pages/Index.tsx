@@ -362,16 +362,16 @@ const Index = () => {
             <Card className="border-0 shadow-lg overflow-hidden">
               <div className="aspect-w-4 aspect-h-5 bg-gray-100">
                 <img 
-                  src="/lovable-uploads/52bde5ac-a7a1-44d8-94e3-d237c61f2daf.png" 
-                  alt="Shivang Tiwari" 
+                  src="/lovable-uploads/1fd6c00b-ff43-4680-9f35-7920ed98261a.png" 
+                  alt="Gaurav Kumar" 
                   className="object-cover w-full h-full"
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-1">Shivang Tiwari</h3>
-                <p className="text-techealth-blue font-medium mb-4">Chief Executive Officer</p>
+                <h3 className="text-2xl font-bold mb-1">Gaurav Kumar</h3>
+                <p className="text-techealth-blue font-medium mb-4">Chief Operations Officer</p>
                 <p className="text-gray-600 mb-4">
-                  A visionary leader with expertise in AI and IoT technologies focused on making India's roads safer through innovation.
+                  An operations expert with deep knowledge of logistics and transportation systems, driving efficiency and excellence.
                 </p>
                 <a 
                   href="https://www.linkedin.com/in/shivangtiwari23/" 
@@ -388,16 +388,16 @@ const Index = () => {
             <Card className="border-0 shadow-lg overflow-hidden">
               <div className="aspect-w-4 aspect-h-5 bg-gray-100">
                 <img 
-                  src="/lovable-uploads/1fd6c00b-ff43-4680-9f35-7920ed98261a.png" 
-                  alt="Gaurav Kumar" 
+                  src="/lovable-uploads/52bde5ac-a7a1-44d8-94e3-d237c61f2daf.png" 
+                  alt="Shivang Tiwari" 
                   className="object-cover w-full h-full"
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-1">Gaurav Kumar</h3>
-                <p className="text-techealth-blue font-medium mb-4">Chief Operations Officer</p>
+                <h3 className="text-2xl font-bold mb-1">Shivang Tiwari</h3>
+                <p className="text-techealth-blue font-medium mb-4">Chief Executive Officer</p>
                 <p className="text-gray-600 mb-4">
-                  An operations expert with deep knowledge of logistics and transportation systems, driving efficiency and excellence.
+                  A visionary leader with expertise in AI and IoT technologies focused on making India's roads safer through innovation.
                 </p>
                 <a 
                   href="https://www.linkedin.com/in/shivangtiwari23/" 
