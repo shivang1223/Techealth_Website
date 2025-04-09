@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
-                src="/lovable-uploads/f0da810e-b2c6-431f-bdae-e18c3142f4f7.png"
+                src="/lovable-uploads/eae8e393-ede9-40a5-8356-2bd995264322.png"
                 alt="Techealth Apex Logo"
                 className="h-12 w-auto"
               />
