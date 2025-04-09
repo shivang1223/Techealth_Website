@@ -30,15 +30,18 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-up">
               <Link to="/product">
-                <Button size="lg" className="bg-techealth-green hover:bg-techealth-darkgreen text-white">
+                <Button size="lg" className="bg-techealth-green hover:bg-techealth-darkgreen text-white shadow-lg hover:shadow-xl transition-all">
                   Discover EmergencyEye
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  Request Demo
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white/20 shadow-lg hover:shadow-xl transition-all"
+                onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Request Demo
+              </Button>
             </div>
           </div>
         </div>
@@ -95,7 +98,7 @@ const Index = () => {
           
           <div className="flex justify-center mt-12">
             <Link to="/about">
-              <Button className="bg-techealth-blue hover:bg-techealth-darkblue text-white">
+              <Button className="bg-techealth-blue hover:bg-techealth-darkblue text-white shadow-md hover:shadow-lg transition-all">
                 Learn More About Us
               </Button>
             </Link>
@@ -177,7 +180,7 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section id="key-features" className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Key Features</h2>
@@ -238,7 +241,7 @@ const Index = () => {
           
           <div className="flex justify-center mt-12">
             <Link to="/features">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button variant="outline" className="border-white text-white hover:bg-white/20 shadow-md hover:shadow-lg transition-all">
                 View All Features
               </Button>
             </Link>
@@ -346,13 +349,16 @@ const Index = () => {
             Join the growing number of companies using EmergencyEye to enhance safety, reduce costs, and optimize their fleet management.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white bg-white text-techealth-darkgreen hover:bg-transparent hover:text-white">
-                Schedule a Demo
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white bg-white text-techealth-darkgreen hover:bg-transparent hover:text-white shadow-lg hover:shadow-xl transition-all"
+              onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Schedule a Demo
+            </Button>
             <Link to="/product">
-              <Button size="lg" className="bg-gray-900 hover:bg-gray-800 text-white">
+              <Button size="lg" className="bg-gray-900 hover:bg-gray-800 text-white shadow-lg hover:shadow-xl transition-all">
                 Learn More
               </Button>
             </Link>
@@ -361,7 +367,7 @@ const Index = () => {
       </section>
 
       {/* Recent Insights */}
-      <section className="py-20">
+      <section id="recent-insights" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Recent Insights</h2>
@@ -449,7 +455,7 @@ const Index = () => {
           
           <div className="flex justify-center mt-12">
             <Link to="/insights">
-              <Button className="bg-techealth-blue hover:bg-techealth-darkblue text-white">
+              <Button className="bg-techealth-blue hover:bg-techealth-darkblue text-white shadow-md hover:shadow-lg transition-all">
                 View All Insights
               </Button>
             </Link>

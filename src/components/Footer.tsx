@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer id="footer" className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -21,19 +21,29 @@ const Footer = () => {
               Revolutionizing India's commercial vehicle and logistics industry through AI-powered safety and fleet monitoring solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a 
+                href="https://www.linkedin.com/company/techealth23/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors transform hover:scale-110"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a 
+                href="https://www.instagram.com/techealth_india?igsh=MTFha3M4cHJmeG84cQ==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors transform hover:scale-110"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors transform hover:scale-110">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors transform hover:scale-110">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors transform hover:scale-110">
                 <Youtube size={20} />
               </a>
             </div>
@@ -52,10 +62,20 @@ const Footer = () => {
                 <Link to="/product" className="text-gray-300 hover:text-white transition-colors">EmergencyEye</Link>
               </li>
               <li>
-                <Link to="/features" className="text-gray-300 hover:text-white transition-colors">Features</Link>
+                <button 
+                  onClick={() => document.getElementById('key-features')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-gray-300 hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  Features
+                </button>
               </li>
               <li>
-                <Link to="/insights" className="text-gray-300 hover:text-white transition-colors">Insights</Link>
+                <button 
+                  onClick={() => document.getElementById('recent-insights')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-gray-300 hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  Insights
+                </button>
               </li>
               <li>
                 <Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link>
