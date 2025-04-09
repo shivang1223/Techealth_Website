@@ -33,8 +33,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "EmergencyEye", path: "/product" },
-    { name: "Features", action: () => handleScrollTo("key-features") },
+    { name: "Features", path: "/features" },
     { name: "Insights", action: () => handleScrollTo("recent-insights") },
     { name: "Investors", path: "/investors" },
     { name: "Careers", path: "/careers" },
@@ -52,7 +51,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
-                src="/lovable-uploads/8b3085a1-9ca7-4e96-9677-c2186a159b85.png"
+                src="/lovable-uploads/f0da810e-b2c6-431f-bdae-e18c3142f4f7.png"
                 alt="Techealth Apex Logo"
                 className="h-12 w-auto"
               />
@@ -84,7 +83,10 @@ const Navbar = () => {
                 );
               }
             })}
-            <Button className="ml-2 bg-techealth-blue hover:bg-techealth-darkblue shadow-md hover:shadow-lg transition-all">
+            <Button 
+              onClick={() => handleScrollTo("request-demo")}
+              className="ml-2 bg-techealth-blue hover:bg-techealth-darkblue shadow-md hover:shadow-lg transition-all"
+            >
               Request Demo
             </Button>
           </div>
@@ -137,7 +139,13 @@ const Navbar = () => {
                 }
               })}
               <div className="pt-2">
-                <Button className="w-full bg-techealth-blue hover:bg-techealth-darkblue">
+                <Button 
+                  onClick={() => {
+                    handleScrollTo("request-demo");
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full bg-techealth-blue hover:bg-techealth-darkblue"
+                >
                   Request Demo
                 </Button>
               </div>

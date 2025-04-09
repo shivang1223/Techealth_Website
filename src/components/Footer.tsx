@@ -1,9 +1,17 @@
 
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
+  const handleScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   return (
     <footer id="footer" className="bg-gray-900 text-white">
@@ -12,7 +20,7 @@ const Footer = () => {
           <div>
             <Link to="/">
               <img
-                src="/lovable-uploads/8b3085a1-9ca7-4e96-9677-c2186a159b85.png"
+                src="/lovable-uploads/f0da810e-b2c6-431f-bdae-e18c3142f4f7.png"
                 alt="Techealth Apex Logo"
                 className="h-12 w-auto mb-4"
               />
@@ -59,23 +67,18 @@ const Footer = () => {
                 <Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link>
               </li>
               <li>
-                <Link to="/product" className="text-gray-300 hover:text-white transition-colors">EmergencyEye</Link>
+                <Link to="/features" className="text-gray-300 hover:text-white transition-colors">Features</Link>
               </li>
               <li>
                 <button 
-                  onClick={() => document.getElementById('key-features')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-300 hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
-                >
-                  Features
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => document.getElementById('recent-insights')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => handleScrollTo('recent-insights')}
                   className="text-gray-300 hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
                 >
                   Insights
                 </button>
+              </li>
+              <li>
+                <Link to="/investors" className="text-gray-300 hover:text-white transition-colors">Investors</Link>
               </li>
               <li>
                 <Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link>
@@ -88,14 +91,28 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-techealth-green shrink-0 mt-0.5" />
-                <span className="text-gray-300">
-                  123 Innovation Drive, Tech Park,<br /> Bangalore - 560103, Karnataka, India
-                </span>
+                <div className="text-gray-300">
+                  <p className="font-semibold mb-1">Head Office:</p>
+                  <p>N-247, Badarpur, New Delhi, Delhi - 110044</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <MapPin className="mr-2 h-5 w-5 text-techealth-green shrink-0 mt-0.5" />
+                <div className="text-gray-300">
+                  <p className="font-semibold mb-1">Branch Office:</p>
+                  <p>Plot C-184, Industrial Area, Phase VIIIA, Sector 75, Sahibzada Ajit Singh Nagar, Punjab 160071</p>
+                </div>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-techealth-green" />
-                <a href="tel:+919876543210" className="text-gray-300 hover:text-white transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919717365884" className="text-gray-300 hover:text-white transition-colors">
+                  +91 9717365884
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Phone className="mr-2 h-5 w-5 text-techealth-green" />
+                <a href="tel:+916200922552" className="text-gray-300 hover:text-white transition-colors">
+                  +91 6200922552
                 </a>
               </li>
               <li className="flex items-center">
@@ -108,23 +125,21 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Subscribe</h3>
+            <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
             <p className="text-gray-300 mb-4">
-              Subscribe to our newsletter to get the latest news and updates.
+              Ready to revolutionize your fleet management? Contact us or request a demo today.
             </p>
-            <form className="flex flex-col space-y-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="px-4 py-2 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-techealth-green"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 bg-techealth-green text-white rounded-md hover:bg-techealth-darkgreen transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
+            <Button
+              onClick={() => handleScrollTo('request-demo')}
+              className="w-full bg-techealth-green hover:bg-techealth-darkgreen mb-3"
+            >
+              Request a Demo
+            </Button>
+            <Link to="/contact">
+              <Button variant="outline" className="w-full border-white text-white hover:bg-white/10">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
         

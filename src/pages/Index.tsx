@@ -1,13 +1,15 @@
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, TrendingUp, Truck, Eye, Globe, AlertTriangle, BarChart, Navigation, Zap, Users, FileText, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DemoRequestForm from "@/components/DemoRequestForm";
 
 const Index = () => {
+  const [showDemoForm, setShowDemoForm] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,6 +17,10 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
+      
+      {showDemoForm && (
+        <DemoRequestForm onClose={() => setShowDemoForm(false)} />
+      )}
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center">
@@ -29,7 +35,7 @@ const Index = () => {
               EmergencyEye combines AI, IoT, and data analytics to transform commercial vehicle safety and fleet management across India.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-up">
-              <Link to="/product">
+              <Link to="/features">
                 <Button size="lg" className="bg-techealth-green hover:bg-techealth-darkgreen text-white shadow-lg hover:shadow-xl transition-all">
                   Discover EmergencyEye
                 </Button>
@@ -38,7 +44,7 @@ const Index = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-white text-white hover:bg-white/20 shadow-lg hover:shadow-xl transition-all"
-                onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => setShowDemoForm(true)}
               >
                 Request Demo
               </Button>
@@ -341,6 +347,72 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Founders Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Founders</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              The visionary leaders behind Techealth Apex working to transform India's commercial vehicle and logistics industry.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <Card className="border-0 shadow-lg overflow-hidden">
+              <div className="aspect-w-4 aspect-h-5 bg-gray-100">
+                <img 
+                  src="/lovable-uploads/52bde5ac-a7a1-44d8-94e3-d237c61f2daf.png" 
+                  alt="Shivang Tiwari" 
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold mb-1">Shivang Tiwari</h3>
+                <p className="text-techealth-blue font-medium mb-4">Chief Executive Officer</p>
+                <p className="text-gray-600 mb-4">
+                  A visionary leader with expertise in AI and IoT technologies focused on making India's roads safer through innovation.
+                </p>
+                <a 
+                  href="https://www.linkedin.com/in/shivangtiwari23/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-techealth-green hover:text-techealth-darkgreen font-medium"
+                >
+                  <Linkedin className="w-5 h-5 mr-2" />
+                  Connect on LinkedIn
+                </a>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-lg overflow-hidden">
+              <div className="aspect-w-4 aspect-h-5 bg-gray-100">
+                <img 
+                  src="/lovable-uploads/1fd6c00b-ff43-4680-9f35-7920ed98261a.png" 
+                  alt="Gaurav Kumar" 
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold mb-1">Gaurav Kumar</h3>
+                <p className="text-techealth-blue font-medium mb-4">Chief Operations Officer</p>
+                <p className="text-gray-600 mb-4">
+                  An operations expert with deep knowledge of logistics and transportation systems, driving efficiency and excellence.
+                </p>
+                <a 
+                  href="https://www.linkedin.com/in/shivangtiwari23/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-techealth-green hover:text-techealth-darkgreen font-medium"
+                >
+                  <Linkedin className="w-5 h-5 mr-2" />
+                  Connect on LinkedIn
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-techealth-green to-techealth-blue text-white">
         <div className="container mx-auto px-4 text-center">
@@ -353,13 +425,14 @@ const Index = () => {
               size="lg" 
               variant="outline" 
               className="border-white bg-white text-techealth-darkgreen hover:bg-transparent hover:text-white shadow-lg hover:shadow-xl transition-all"
-              onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => setShowDemoForm(true)}
+              id="request-demo"
             >
               Schedule a Demo
             </Button>
-            <Link to="/product">
+            <Link to="/features">
               <Button size="lg" className="bg-gray-900 hover:bg-gray-800 text-white shadow-lg hover:shadow-xl transition-all">
-                Learn More
+                Explore Features
               </Button>
             </Link>
           </div>
