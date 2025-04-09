@@ -15,7 +15,7 @@ import {
   Navigation, 
   AlertOctagon, 
   Gauge, 
-  Speedboat, 
+  Ship, // Replaced Speedboat with Ship icon
   LayoutDashboard 
 } from "lucide-react";
 import DemoRequestForm from "@/components/DemoRequestForm";
@@ -93,7 +93,7 @@ const Features = () => {
     {
       title: "Automatic speed reduction system",
       description: "AI-powered speed control that automatically adjusts vehicle speed in dangerous conditions.",
-      icon: Speedboat,
+      icon: Ship, // Changed from Speedboat to Ship
       color: "text-techealth-blue"
     },
     {

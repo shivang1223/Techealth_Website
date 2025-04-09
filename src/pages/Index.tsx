@@ -1,8 +1,9 @@
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, TrendingUp, Truck, Eye, Globe, AlertTriangle, BarChart, Navigation, Zap, Users, FileText, Clock } from "lucide-react";
+import { Shield, TrendingUp, Truck, Eye, Globe, AlertTriangle, BarChart, Navigation, Zap, Users, FileText, Clock, Linkedin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DemoRequestForm from "@/components/DemoRequestForm";
